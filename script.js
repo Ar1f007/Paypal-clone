@@ -16,6 +16,13 @@ dropdownItems.forEach(dropdownItem => {
     document.querySelector(".navbar-wrapper").style.background = "none";
   });
 });
+
+const menuIcon = document.querySelector(".menu");
+const navbar = document.querySelector(".navbar");
+
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("change");
+});
 // End of Navigation
 
 // Pages
