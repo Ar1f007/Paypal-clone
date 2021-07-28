@@ -73,6 +73,10 @@ html {
   transition: all 0.2s;
 }
 
+.menu {
+  display: none;
+}
+
 .navbar {
   width: 120rem;
   height: 100%;
@@ -121,6 +125,10 @@ html {
   flex-direction: column;
 }
 
+.dropdown-heading {
+  display: none;
+}
+
 .nav-dropdown-link-1 {
   font-size: 1.6rem;
   color: #fff;
@@ -145,10 +153,6 @@ html {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   transition: transform 0.3s;
-}
-
-.nav-list-item:hover .nav-list-link i {
-  transform: rotateZ(180deg);
 }
 
 .navbar-btn {
@@ -871,6 +875,10 @@ html {
 
   .nav-dropdown-link-2 {
     display: none;
+  }
+
+  .dropdown-heading {
+    display: block;
   }
 
   .nav-list-item {
