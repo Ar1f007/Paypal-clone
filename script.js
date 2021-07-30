@@ -9,25 +9,25 @@ if (window.innerWidth < 1000) {
     navbar.classList.toggle("change");
 
     if (!navbar.classList.contains("change")) {
-      document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+      document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
         dropdown.style.left = "-20rem";
       });
     }
   });
 
-  document.querySelectorAll(".show-dropdown").forEach(link => {
+  document.querySelectorAll(".show-dropdown").forEach((link) => {
     link.addEventListener("click", () => {
       link.nextElementSibling.style.left = "0";
     });
   });
 
-  document.querySelectorAll(".dropdown-heading-link").forEach(headingLink => {
+  document.querySelectorAll(".dropdown-heading-link").forEach((headingLink) => {
     headingLink.addEventListener("click", () => {
       headingLink.parentElement.parentElement.style.left = "20rem";
     });
   });
 } else {
-  dropdownItems.forEach(dropdownItem => {
+  dropdownItems.forEach((dropdownItem) => {
     dropdownItem.addEventListener("mouseover", () => {
       dropdownItem.lastElementChild.style.cssText =
         "opacity: 1; visibility:visible";
@@ -49,24 +49,28 @@ if (window.innerWidth < 1000) {
   });
 }
 
+window.addEventListener("resize", () => {
+  window.location.reload();
+});
+
 // End of Navigation
 
 // Pages
-document.querySelectorAll(".logo").forEach(logo => {
+document.querySelectorAll(".logo").forEach((logo) => {
   logo.addEventListener("click", () => {
     document.querySelector(".front-page").style.display = "block";
     document.querySelector(".login-page").style.display = "none";
     document.querySelector(".signup-page").style.display = "none";
   });
 });
-document.querySelectorAll(".login").forEach(loginBtn => {
+document.querySelectorAll(".login").forEach((loginBtn) => {
   loginBtn.addEventListener("click", () => {
     document.querySelector(".front-page").style.display = "none";
     document.querySelector(".login-page").style.display = "block";
     document.querySelector(".signup-page").style.display = "none";
   });
 });
-document.querySelectorAll(".signup").forEach(signupBtn => {
+document.querySelectorAll(".signup").forEach((signupBtn) => {
   signupBtn.addEventListener("click", () => {
     document.querySelector(".front-page").style.display = "none";
     document.querySelector(".login-page").style.display = "none";
